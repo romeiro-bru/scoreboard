@@ -1,63 +1,10 @@
 // module and the object we are importing from that module
 import React from 'react';
 import ReactDOM from 'react-dom';
-import style from './style.css'; 
+import './styles/style.css'; 
 
-const Header = (props) => {
-    return(
-        <header>
-          <h1>{ props.title }</h1>
-          <span className="stats">Players: { props.totalPlayers }</span>
-        </header>
-    );
-}
-
-const Player = (props) => {
-    return (
-        <div className="player">
-            <span className="player-name">
-              <button className="remove-player" onClick={ () => props.removePlayer(props.id) }>✖</button>
-               { props.name }
-            </span>
-            <Counter />
-        </div>
-    )
-}
-class Counter extends React.Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     score: 0 
-  //   };
-  // } OU
-  state = {
-    score: 0
-  };
-
-  incrementScore() {
-    this.setState( prevState => {
-      return {
-      score: prevState.score + 1
-      }
-    })
-  }
-  decrementScore() {
-    this.setState( prevState => {
-      return {
-      score: prevState.score - 1
-      }
-    })
-  }
-
-  render () {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement" onClick={this.decrementScore.bind(this)}> - </button>
-        <span className="counter-score">{this.state.score}</span>
-        <button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
-      </div>
-    )}
-}
+import Header from './components/Header';
+import Player from  './components/Player';
 
 class App extends React.Component {
   state = {
@@ -102,3 +49,5 @@ class App extends React.Component {
 }
 
 ReactDOM.render( <App />, document.getElementById('root'));
+
+export default App;
