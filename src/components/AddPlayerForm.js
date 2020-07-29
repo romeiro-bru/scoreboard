@@ -10,11 +10,16 @@ class AddPlayerForm extends React.Component {
         this.setState({ value: event.target.value });
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.AddPlayer(this.state.value);
+    }
+
     render() {
         return(
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input type="text" onChange={this.handleValueChange} value={this.state.value} placeholder="Enter a players name"/>
-                <input type="subtmit" value="Add a player"/>
+                <input type="submit" value="Add a player"/>
             </form>
         );
     }
