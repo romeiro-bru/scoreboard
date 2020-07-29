@@ -10,17 +10,17 @@ import AddPlayerForm from './components/AddPlayerForm';
 class App extends React.Component {
   state = {
     players: [  {
-      name: "Mia",
+      name: "User 1",
       score: 0,
       id: 1
     },
     {
-      name: "Jana",
+      name: "User 2",
       score: 0,
       id: 2
     },
     {
-      name: "Nami",
+      name: "User 3",
       score: 0,
       id: 3
     }]    
@@ -36,15 +36,17 @@ class App extends React.Component {
   }
 
   handleAddPlayer = (name) => {
-    this.setState({
-      players: [
-        ...this.state.players,
-        {
-          name: name,
-          score: 0,
-          id: this.prevPlayerId +=1,
-        }
-      ]
+    this.setState( prevState => {
+      return {
+        players: [
+          ...this.state.players,
+          {
+            name: name,
+            score: 0,
+            id: this.prevPlayerId +=1,
+          }
+        ]
+      }
     });
   }
 
