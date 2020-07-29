@@ -39,7 +39,7 @@ class App extends React.Component {
     this.setState( prevState => {
       return {
         players: [
-          ...this.state.players,
+          ...prevState.players,
           {
             name: name,
             score: 0,
