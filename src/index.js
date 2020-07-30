@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css'; 
 
+import { Provider } from './components/Context';
 import Header from './components/Header';
 import Player from  './components/Player';
 import AddPlayerForm from './components/AddPlayerForm';
@@ -60,23 +61,25 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="scoreboard">
-        <Header title="my scoreboard" players={this.state.players} />
-  
-        {/* players list */}
-        { this.state.players.map( (player, index) =>
-         <Player
-           name={player.name}
-           score={player.score}
-           id={player.id}
-           key={player.id.toString()}
-           index={index}
-           changeScore={this.handleScoreChange}
-           removePlayer={this.handleRemovePlayer}
-           />
-        )}
-        <AddPlayerForm AddPlayer={this.handleAddPlayer}/>
-      </div>
+      <Provider>
+        <div className="scoreboard">
+          <Header title="my scoreboard" players={this.state.players} />
+    
+          {/* players list */}
+          { this.state.players.map( (player, index) =>
+          <Player
+            name={player.name}
+            score={player.score}
+            id={player.id}
+            key={player.id.toString()}
+            index={index}
+            changeScore={this.handleScoreChange}
+            removePlayer={this.handleRemovePlayer}
+            />
+          )}
+          <AddPlayerForm AddPlayer={this.handleAddPlayer}/>
+        </div>
+      </Provider>
     )}
 }
 
