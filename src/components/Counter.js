@@ -1,5 +1,5 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Counter = (props) => {
     let index = props.index;
@@ -13,7 +13,7 @@ const Counter = (props) => {
       )};
 
       // validating numbers and function
-  Counter.proptypes = {
+  Counter.propTypes = {
     index: PropTypes.number ,
     score: PropTypes.number,
     changeScore: PropTypes.func
