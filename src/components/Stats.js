@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 // stateless functional component
 
 const Stats = (props) => {
@@ -22,6 +23,12 @@ const Stats = (props) => {
             </tbody>
         </table>
     );
+}
+
+Stats.propTypes = {
+    players: PropTypes.arrayOf(PropTypes.shape({
+        score: PropTypes.number
+    }))
 }
 
 export default Stats;
