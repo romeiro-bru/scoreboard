@@ -1,0 +1,56 @@
+/* FORM */
+input[type=submit] {
+    display: block;
+    font-size: .6em;
+    margin: 15px 15px 15px 0; 
+    padding: 10px;
+    background-color: #44338D;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  button, 
+  input[type=submit] {
+    outline: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+  }
+  /* INCREMENT DECREMENT */
+  .counter-action:hover {
+    color: #fff;
+  }
+
+  .increment:hover {
+    background: #83D97C;
+  }
+
+  .decrement:hover {
+    background: #EF5350;
+  }
+
+  /* STOPWATCH  */
+  .stopwatch button {
+    margin: 8px 5px;
+    background-color: #44338D;
+    border-radius: 5px;
+    padding: 7px 8px;
+    border: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+  }
+
+  .stopwatch button:hover,
+  input[type=submit]:hover {
+    background: #fff;
+    color: #44338D;
+    cursor: pointer;
+  }
