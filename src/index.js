@@ -1,7 +1,7 @@
 // module and the object we are importing from that module
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/style.css'; 
+import './stylesheets/index.css'; 
 
 import Header from './components/Header';
 import Player from  './components/Player';
