@@ -5,6 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 </p>
 <br/>
 
+## Features :deciduous_tree:
+* Add and remove players
+* Add and remove players points
+* Display the total players points
+* Stopwatch with play, stop and reset 
+
+## Technologies :octocat:
+* React :sparkles:
+* Css :nail_care:
+* HTML :hammer:	
+
 ## Available Scripts
 
 In the project directory, you can run:
