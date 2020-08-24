@@ -16,5 +16,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Css :nail_care:
 * HTML :hammer:	
 
-
-Designed by Treehouse :frog:
+## 
+ Designed by Treehouse :frog:
